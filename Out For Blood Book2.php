@@ -1,3 +1,13 @@
+<?php
+session_start(); // Start session to check login status
+
+// Redirect user to login page if not logged in
+if (!isset($_SESSION['user'])) {
+    header("Location: login.php");
+    exit();
+}
+?>
+
 <?php 
 // Include header
 include('includes/header.php'); 
